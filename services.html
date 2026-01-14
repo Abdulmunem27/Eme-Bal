@@ -8,14 +8,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fbfbfb; }
+        /* Updated whole page background */
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F6F2E3; }
+        
         .text-eme-gray { color: #546166; }
         .text-eme-brown { color: #A67C52; }
         .bg-eme-brown { background-color: #A67C52; }
         .bg-eme-gray { background-color: #546166; }
         
-        .bento-card { background: white; border: 1px solid #e5e7eb; transition: all 0.3s ease; height: 100%; }
-        .bento-card:hover { border-color: #A67C52; transform: translateY(-4px); }
+        .bento-card { transition: all 0.3s ease; height: 100%; }
+        .bento-card:hover { transform: translateY(-4px); filter: brightness(1.1); }
 
         @keyframes scroll {
             0% { transform: translateX(0); }
@@ -63,7 +65,7 @@
 </head>
 <body class="text-slate-900">
 
-    <nav class="flex justify-between items-center py-4 px-6 md:px-12 border-b border-gray-100 bg-white/70 backdrop-blur-md sticky top-0 z-50">
+    <nav class="flex justify-between items-center py-4 px-6 md:px-12 border-b border-gray-200 sticky top-0 z-50" style="background-color: rgba(246, 242, 227, 0.8); backdrop-filter: blur(12px);">
         <div class="flex items-center gap-3">
             <img src="homepage/logo.jpeg" alt="EME-BAL Logo" class="h-12 w-auto">
             <div class="text-xl font-extrabold tracking-tight text-eme-gray">EME<span class="text-eme-brown">-</span>BAL</div>
@@ -76,7 +78,7 @@
         </div>
     </nav>
 
-    <header class="py-16 px-6 text-center bg-white">
+    <header class="py-16 px-6 text-center">
         <h1 class="text-4xl md:text-5xl font-extrabold text-eme-gray mb-4">Our Services - خدماتنا</h1>
         <div class="w-20 h-1 bg-eme-brown mx-auto"></div>
     </header>
@@ -87,68 +89,68 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <div class="bento-card p-8 bg-eme-gray text-white border-none rounded-[32px] flex flex-col justify-center">
-                    <p class="text-lg font-bold leading-relaxed  text-slate-800 mb-4" dir="rtl">
+                <div class="bento-card p-8 bg-eme-gray text-white rounded-[32px] flex flex-col justify-center">
+                    <p class="text-lg font-bold leading-relaxed mb-4" dir="rtl">
                         نلتزم بتقديم خدمة احترافية متكاملة تجمع بين الدقة في الترجمة والحرص على سلامة الإجراءات، لضمان تجربة سلسة وموثوقة لعملائنا.
                     </p>
-                    <p class="text-sm opacity-80 italic text-eme-brown" dir="ltr">
+                    <p class="text-sm opacity-80 italic text-white" dir="ltr">
                         "We are committed to delivering a fully professional and integrated service, combining accuracy in translation with careful attention to procedural requirements, ensuring a smooth and reliable experience for our clients."
                     </p>
                 </div>
 
-                <div class="bento-card p-10 rounded-[32px] md:col-span-2" dir="rtl">
-                    <h3 class="text-eme-brown font-bold mb-4">الترجمة القانونية المعتمدة</h3>
-                    <p class="text-2xl md:text-3xl font-extrabold leading-tight text-slate-800 mb-6">
+                <div class="bento-card p-10 rounded-[32px] md:col-span-2 bg-eme-brown text-white" dir="rtl">
+                    <h3 class="text-eme-gray font-black mb-4 bg-white/20 w-fit px-3 py-1 rounded-lg">الترجمة القانونية المعتمدة</h3>
+                    <p class="text-2xl md:text-3xl font-extrabold leading-tight mb-6">
                         نقدّم مجموعة متكاملة من الخدمات تشمل الترجمة القانونية والمعتمدة لكافة الوثائق والمستندات الرسمية، وفق أعلى معايير الدقة والسرية.
                     </p>
-                    <p class="text-lg text-slate-500 italic font-medium" dir="ltr">
+                    <p class="text-lg opacity-90 italic font-medium" dir="ltr">
                         "We offer a comprehensive range of services, including certified legal translation for all official documents and records, in accordance with the highest standards of accuracy and confidentiality."
                     </p>
                 </div>
 
-                <div class="bento-card p-10 rounded-[32px] md:col-span-3 border-eme-brown/30 bg-orange-50/30" dir="rtl">
-                    <h3 class="text-eme-brown font-bold mb-4">خدمات فيزا شنغن (Schengen Visa)</h3>
-                    <p class="text-xl md:text-2xl font-bold text-slate-700 leading-relaxed mb-6">
-                        كما نوفر خدمات فيزا شنغن لكل من إيطاليا وفرنسا وألمانيا، وتشمل ترجمة المستندات المطلوبة، تدقيقها، إعداد وتنظيم ملف التقديم، حجوزات الطيران والفنادق، إصدار التأمين الصحي، وملىء استمارات التقديم، بما يسهّل على عملائنا استكمال الإجراءات بكل وضوح واطمئنان.
+                <div class="bento-card p-10 rounded-[32px] md:col-span-3 bg-eme-gray text-white" dir="rtl">
+                    <h3 class="text-white font-black mb-4 bg-white/10 w-fit px-3 py-1 rounded-lg">خدمات فيزا شنغن (Schengen Visa)</h3>
+                    <p class="text-xl md:text-2xl font-bold leading-relaxed mb-6">
+                        كما نوفر خدمات فيزا شنغن لكل من إيطاليا وفرنسا وألماينا، وتشمل ترجمة المستندات المطلوبة، تدقيقها، إعداد وتنظيم ملف التقديم، حجوزات الطيران والفنادق، إصدار التأمين الصحي، وملىء استمارات التقديم، بما يسهّل على عملائنا استكمال الإجراءات بكل وضوح واطمئنان.
                     </p>
-                    <p class="text-base text-slate-500 italic font-medium" dir="ltr">
-                        "We also provide Schengen visa services for Italy, France, and Germany, including translation and proofreading of required documents, preparation and organization of the application file, flight and hotel bookings, issuance of health insurance, and completion of application forms, making it easier for our clients to complete the procedures with clarity and peace of mind."
+                    <p class="text-base opacity-80 italic font-medium" dir="ltr">
+                        "We also provide Schengen visa services for Italy, France, and Germany, including translation and proofreading of required documents, preparation and organization of the application file, flight and hotel bookings, issuance of health insurance, and completion of application forms."
                     </p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bento-card p-10 rounded-[40px] bg-slate-50">
-                    <h3 class="text-2xl font-bold text-eme-brown mb-6">Our Goal - هدفنا</h3>
-                    <p class="text-lg text-eme-gray mb-4 font-bold" dir="rtl">
+                <div class="bento-card p-10 rounded-[40px] bg-eme-brown text-white">
+                    <h3 class="text-2xl font-black mb-6 border-b border-white/20 pb-2">Our Goal - هدفنا</h3>
+                    <p class="text-lg mb-4 font-bold" dir="rtl">
                         هدفنا هو أن نكون حلقة الوصل اللغوية الموثوقة بين عملائنا والجهات الرسمية، وأن نوفّر خدمة احترافية تمنحهم الثقة والطمأنينة في كل معاملة.
                     </p>
-                    <p class="text-sm text-slate-500 italic">
+                    <p class="text-sm opacity-80 italic">
                         "Our goal is to be the trusted linguistic link between our clients and official authorities, providing a professional service that gives them confidence and peace of mind in every transaction."
                     </p>
                 </div>
 
-                <div class="bento-card p-10 rounded-[40px] border-eme-brown/20 shadow-sm" dir="rtl">
-                    <h3 class="text-2xl font-bold text-eme-gray mb-6">لماذا تختارنا؟</h3>
+                <div class="bento-card p-10 rounded-[40px] bg-eme-gray text-white" dir="rtl">
+                    <h3 class="text-2xl font-black mb-6 border-b border-white/20 pb-2">لماذا تختارنا؟</h3>
                     <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-slate-700 font-bold">
-                            <span class="w-6 h-6 bg-eme-brown/10 text-eme-brown rounded-full flex items-center justify-center text-xs">✓</span>
+                        <li class="flex items-center gap-3 font-bold">
+                            <span class="w-6 h-6 bg-eme-brown text-white rounded-full flex items-center justify-center text-xs">✓</span>
                             ترجمة قانونية معتمدة لجميع الوثائق
                         </li>
-                        <li class="flex items-center gap-3 text-slate-700 font-bold">
-                            <span class="w-6 h-6 bg-eme-brown/10 text-eme-brown rounded-full flex items-center justify-center text-xs">✓</span>
+                        <li class="flex items-center gap-3 font-bold">
+                            <span class="w-6 h-6 bg-eme-brown text-white rounded-full flex items-center justify-center text-xs">✓</span>
                             دقة عالية ومراجعة لغوية وقانونية
                         </li>
-                        <li class="flex items-center gap-3 text-slate-700 font-bold">
-                            <span class="w-6 h-6 bg-eme-brown/10 text-eme-brown rounded-full flex items-center justify-center text-xs">✓</span>
+                        <li class="flex items-center gap-3 font-bold">
+                            <span class="w-6 h-6 bg-eme-brown text-white rounded-full flex items-center justify-center text-xs">✓</span>
                             التزام تام بالسرية
                         </li>
-                        <li class="flex items-center gap-3 text-slate-700 font-bold">
-                            <span class="w-6 h-6 bg-eme-brown/10 text-eme-brown rounded-full flex items-center justify-center text-xs">✓</span>
+                        <li class="flex items-center gap-3 font-bold">
+                            <span class="w-6 h-6 bg-eme-brown text-white rounded-full flex items-center justify-center text-xs">✓</span>
                             سرعة في الإنجاز وخدمة 24 ساعة
                         </li>
-                        <li class="flex items-center gap-3 text-slate-700 font-bold">
-                            <span class="w-6 h-6 bg-eme-brown/10 text-eme-brown rounded-full flex items-center justify-center text-xs">✓</span>
+                        <li class="flex items-center gap-3 font-bold">
+                            <span class="w-6 h-6 bg-eme-brown text-white rounded-full flex items-center justify-center text-xs">✓</span>
                             خبرة عملية وتعامل مباشر مع مترجم قانوني مختص
                         </li>
                     </ul>
@@ -174,14 +176,14 @@
         </section>
 
         <div class="mt-24 text-center">
-            <button class="bg-eme-brown text-white px-12 py-5 rounded-2xl font-extrabold text-lg shadow-xl shadow-orange-100 hover:scale-105 transition-all">
+            <button class="bg-eme-brown text-white px-12 py-5 rounded-2xl font-extrabold text-lg shadow-xl hover:scale-105 transition-all">
                 <a href="contact.html">Contact Us - تواصل معنا</a>
             </button>
         </div>
     </main>
 
-    <footer class="py-12 border-t border-gray-100 text-center text-slate-400 text-sm">
-        <p dir="rtl">&copy; 2026 مكتب ايمي-بأل للترجمة القانونية. جميع الحقوق محفوظة.</p>
+    <footer class="py-12 border-t border-gray-200/50 text-center text-slate-400 text-sm">
+        <p>&copy; 2026 EME-BAL FOR LEGAL TRANSLATION. All rights reserved.</p>
     </footer>
 
 </body>
