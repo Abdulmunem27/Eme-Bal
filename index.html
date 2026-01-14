@@ -8,13 +8,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fbfbfb; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F6F2E3; }
+        
         .text-eme-gray { color: #546166; }
+        .text-eme-brown { color: #A67C52; }
         .bg-eme-brown { background-color: #A67C52; }
+        .bg-eme-gray { background-color: #546166; }
         .border-eme-brown { border-color: #A67C52; }
         
-        .bento-card { background: white; border: 1px solid #e5e7eb; transition: all 0.3s ease; }
-        .bento-card:hover { border-color: #A67C52; transform: translateY(-4px); }
+        .bento-card { transition: all 0.3s ease; }
+        .bento-card:hover { transform: translateY(-4px); filter: brightness(1.1); }
         
         .hero-overlay {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
@@ -47,13 +50,11 @@
             transition: all 0.3s ease;
         }
         
-       
         .language-badge img.flag-placeholder {
             position: absolute;
             inset: 0; 
             width: 100%;
             height: 100%;
-        
             object-fit: cover; 
             opacity: 1; 
             z-index: -2; 
@@ -73,15 +74,14 @@
         .language-badge:hover img.flag-placeholder {
             transform: scale(1.1);
         }
-
     </style>
 </head>
 <body class="text-slate-900">
 
-    <nav class="flex justify-between items-center py-4 px-6 md:px-12 border-b border-gray-100 bg-white/70 backdrop-blur-md sticky top-0 z-50">
+    <nav class="flex justify-between items-center py-4 px-6 md:px-12 border-b border-gray-200 sticky top-0 z-50" style="background-color: rgba(246, 242, 227, 0.8); backdrop-filter: blur(12px);">
         <div class="flex items-center gap-3">
             <img src="homepage/logo.jpeg" alt="EME-BAL Logo" class="h-12 w-auto">
-            <div class="text-xl font-extrabold tracking-tight text-eme-gray">EME<span class="text-eme-brown">-</span>BAL</div>
+            <div class="text-xl font-extrabold tracking-tight text-eme-gray">EME<span class="text-[#A67C52]">-</span>BAL</div>
         </div>
         <div class="hidden md:flex space-x-8 text-sm font-medium">
             <a href="index.html" class="text-[#A67C52]">Home</a>
@@ -93,7 +93,7 @@
 
     <header class="relative h-[60vh] flex items-center justify-center text-center text-white px-6">
         <div class="absolute inset-0 z-0">
-            <img src="homepage/hero.jpeg" alt="Hero Background" class="w-full h-full object-cover">
+            <img src="homepage/baghdad.jpeg" alt="Hero Background" class="w-full h-full object-cover">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         <div class="relative z-10 max-w-4xl">
@@ -109,14 +109,15 @@
         </div>
     </header>
 
-    <section class="py-20 px-6 bg-white">
+    <section class="py-20 px-6">
         <div class="max-w-4xl mx-auto text-center" dir="rtl">
             <span class="bg-orange-50 text-[#A67C52] px-4 py-1.5 rounded-full text-xl font-bold tracking-wide border border-orange-100 uppercase mb-6 inline-block">
                 ترخيص رسمي
             </span>
             <p class="text-2xl md:text-3xl font-semibold text-eme-gray leading-relaxed mb-6">
-                يعد مكتب ايمي-بأل للترجمة القانونية أحد المزودين الرائدين لخدمات الترجمة القانونية. يضمن فريقنا من المتخصصين القانونيين الخبراء ترجمات دقيقة وموثوقة لجميع احتياجاتك القانونية.
+                يعد مكتب ايمي-بأل للترجمة القانونية أحد المزودين الرائدين لخدمات الترجمة القانونية
             </p>
+            <p class="text-2xl md:text-3xl font-semibold text-eme-gray leading-relaxed mb-6"> يضمن فريقنا من المتخصصين القانونيين الخبراء ترجمات دقيقة وموثوقة لجميع احتياجاتك القانونية</p>
             <p class="text-lg text-[#A67C52] font-bold">
                 مجاز من قبل جمعية المترجمين العراقيين برقم الاجازة 215
             </p>
@@ -124,32 +125,32 @@
     </section>
 
     <section class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-24 px-6">
-        <div class="bento-card p-10 rounded-[40px] flex flex-col justify-between">
+        <div class="bento-card p-10 rounded-[40px] flex flex-col justify-between bg-eme-gray text-white shadow-xl">
             <div>
-                <h3 class="text-2xl font-extrabold text-eme-gray mb-6 uppercase tracking-tight">Our Mission</h3>
-                <p class="text-slate-600 leading-relaxed mb-6">
+                <h3 class="text-2xl font-black text-eme-brown mb-6 uppercase tracking-tight">Our Mission</h3>
+                <p class="leading-relaxed mb-6 opacity-90 font-medium">
                     We provide certified and accurate legal translation for all official documents and records, in accordance with the highest locally and internationally recognized professional standards.
                 </p>
-                <p class="text-slate-600 leading-relaxed">
+                <p class="leading-relaxed opacity-90 font-medium">
                     We aim to simplify procedures for our clients by offering comprehensive solutions that include translation, proofreading, and visa services.
                 </p>
             </div>
         </div>
 
-        <div class="bento-card p-10 rounded-[40px] flex flex-col justify-between border-eme-brown/30 bg-slate-50/50" dir="rtl">
+        <div class="bento-card p-10 rounded-[40px] flex flex-col justify-between bg-eme-brown text-white shadow-xl" dir="rtl">
             <div>
-                <h3 class="text-2xl font-extrabold text-eme-gray mb-6 tracking-tight">رؤيتنا</h3>
-                <p class="text-slate-600 leading-relaxed mb-6">
+                <h3 class="text-2xl font-black text-eme-gray mb-6 tracking-tight bg-white/20 w-fit px-4 py-1 rounded-xl">رؤيتنا</h3>
+                <p class="leading-relaxed mb-6 font-bold text-xl">
                     نُقدّم ترجمة قانونية معتمدة ودقيقة لجميع الوثائق والمستندات الرسمية، وفق أعلى المعايير المهنية المعتمدة محليًا ودوليًا.
                 </p>
-                <p class="text-slate-600 leading-relaxed">
+                <p class="leading-relaxed opacity-90 font-medium">
                     نعمل على تسهيل الإجراءات لعملائنا من خلال تقديم حلول متكاملة تشمل الترجمة، التدقيق، التنسيق، وخدمات التأشيرات.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 bg-white border-y border-gray-50">
+    <section class="py-24 px-6 border-y border-gray-200/50">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                 <div class="max-w-2xl">
@@ -179,19 +180,19 @@
         </div>
     </section>
 
-    <section class="bg-slate-900 text-white py-24 px-6 overflow-hidden">
+    <section class="bg-eme-gray text-white py-24 px-6 overflow-hidden">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <div class="order-2 lg:order-1">
                 <div class="mb-12">
-                    <h4 class="text-eme-brown font-bold mb-4 uppercase tracking-widest text-sm">Philosophy of Translation</h4>
-                    <p class="text-lg text-slate-300 leading-relaxed">
+                    <h4 class="text-white font-black mb-4 uppercase tracking-widest text-sm bg-white/10 w-fit px-3 py-1 rounded-lg">Philosophy of Translation</h4>
+                    <p class="text-xl text-white leading-relaxed font-medium">
                         "Language is not merely a set of words to be spoken or written; it is a complete system that reflects human thought, culture, and the way we perceive the world. From this depth arises translation, as an intellectual act that connects languages, not only at the level of words, but at the level of meaning, context, and culture."
                     </p>
                 </div>
                 
                 <div dir="rtl" class="border-r-4 border-eme-brown pr-8">
-                    <p class="text-xl md:text-2xl font-medium leading-loose text-white">
+                    <p class="text-2xl md:text-3xl font-bold leading-loose text-white">
                         "اللغة ليست مجرد كلماتٍ تُنطق أو تُكتب، بل هي نظام متكامل يعكس فكر الإنسان، وثقافته، وطريقة فهمه للعالم. ومن هذا العمق تولد الترجمة، بوصفها فعلًا معرفيًا يربط بين اللغات لا على مستوى اللفظ فقط، بل على مستوى المعنى والسياق والثقافة."
                     </p>
                 </div>
@@ -206,7 +207,7 @@
         </div>
     </section>
 
-    <footer class="py-12 border-t border-gray-100 text-center text-slate-400 text-sm bg-white">
+    <footer class="py-12 border-t border-gray-200/50 text-center text-slate-500 text-sm">
         <p>&copy; 2026 EME-BAL FOR LEGAL TRANSLATION. All rights reserved.</p>
     </footer>
 
