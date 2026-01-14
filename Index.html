@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EME-BAL | Legal Translation & Visa Services</title>
+    <link rel="icon" type="image/jpeg" href="homepage/logo.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fbfbfb; }
+        .text-eme-gray { color: #546166; }
+        .bg-eme-brown { background-color: #A67C52; }
+        .border-eme-brown { border-color: #A67C52; }
+        
+        .bento-card { background: white; border: 1px solid #e5e7eb; transition: all 0.3s ease; }
+        .bento-card:hover { border-color: #A67C52; transform: translateY(-4px); }
+        
+        .hero-overlay {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+        }
+
+        .language-badge {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 20px; 
+            border: 1px solid rgba(255, 255, 255, 0.2); 
+            border-radius: 20px;
+            color: white; 
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            z-index: 1;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .language-badge::before {
+            content: '';
+            position: absolute;
+            inset: 0; 
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+            z-index: -1; 
+            transition: all 0.3s ease;
+        }
+        
+       
+        .language-badge img.flag-placeholder {
+            position: absolute;
+            inset: 0; 
+            width: 100%;
+            height: 100%;
+        
+            object-fit: cover; 
+            opacity: 1; 
+            z-index: -2; 
+            transition: transform 0.5s ease;
+        }
+
+        .language-badge:hover {
+            border-color: #A67C52;
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .language-badge:hover::before {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+        }
+
+        .language-badge:hover img.flag-placeholder {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <nav class="flex justify-between items-center py-4 px-6 md:px-12 border-b border-gray-100 bg-white/70 backdrop-blur-md sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <img src="homepage/logo.jpeg" alt="EME-BAL Logo" class="h-12 w-auto">
+            <div class="text-xl font-extrabold tracking-tight text-eme-gray">EME<span class="text-eme-brown">-</span>BAL</div>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="index.html" class="text-[#A67C52]">Home</a>
+            <a href="services.html" class="hover:text-[#A67C52] transition">Services</a>
+            <a href="ourwork.html" class="hover:text-[#A67C52] transition">Workshop</a>
+            <button class="bg-[#546166] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-[#A67C52] transition"><a href="contact.html">Contact Us</a></button>
+        </div>
+    </nav>
+
+    <header class="relative h-[60vh] flex items-center justify-center text-center text-white px-6">
+        <div class="absolute inset-0 z-0">
+            <img src="homepage/hero.jpeg" alt="Hero Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">
+                EME-BAL FOR LEGAL TRANSLATION AND VISA SERVICES
+            </h1>
+            <h2 class="text-2xl md:text-4xl font-bold mb-8" dir="rtl">
+                مكتب ايمي-بآل للترجمة القانونية وخدمات فيز الشنغن
+            </h2>
+            <button class="bg-eme-brown text-white px-10 py-4 rounded-2xl font-bold shadow-xl hover:opacity-90 transition">
+                <a href="services.html">Explore Our Services</a>
+            </button>
+        </div>
+    </header>
+
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto text-center" dir="rtl">
+            <span class="bg-orange-50 text-[#A67C52] px-4 py-1.5 rounded-full text-xl font-bold tracking-wide border border-orange-100 uppercase mb-6 inline-block">
+                ترخيص رسمي
+            </span>
+            <p class="text-2xl md:text-3xl font-semibold text-eme-gray leading-relaxed mb-6">
+                يعد مكتب ايمي-بأل للترجمة القانونية أحد المزودين الرائدين لخدمات الترجمة القانونية. يضمن فريقنا من المتخصصين القانونيين الخبراء ترجمات دقيقة وموثوقة لجميع احتياجاتك القانونية.
+            </p>
+            <p class="text-lg text-[#A67C52] font-bold">
+                مجاز من قبل جمعية المترجمين العراقيين برقم الاجازة 215
+            </p>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 pb-24 px-6">
+        <div class="bento-card p-10 rounded-[40px] flex flex-col justify-between">
+            <div>
+                <h3 class="text-2xl font-extrabold text-eme-gray mb-6 uppercase tracking-tight">Our Mission</h3>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    We provide certified and accurate legal translation for all official documents and records, in accordance with the highest locally and internationally recognized professional standards.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    We aim to simplify procedures for our clients by offering comprehensive solutions that include translation, proofreading, and visa services.
+                </p>
+            </div>
+        </div>
+
+        <div class="bento-card p-10 rounded-[40px] flex flex-col justify-between border-eme-brown/30 bg-slate-50/50" dir="rtl">
+            <div>
+                <h3 class="text-2xl font-extrabold text-eme-gray mb-6 tracking-tight">رؤيتنا</h3>
+                <p class="text-slate-600 leading-relaxed mb-6">
+                    نُقدّم ترجمة قانونية معتمدة ودقيقة لجميع الوثائق والمستندات الرسمية، وفق أعلى المعايير المهنية المعتمدة محليًا ودوليًا.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    نعمل على تسهيل الإجراءات لعملائنا من خلال تقديم حلول متكاملة تشمل الترجمة، التدقيق، التنسيق، وخدمات التأشيرات.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-white border-y border-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h3 class="text-3xl font-extrabold text-eme-gray mb-4">Available Languages</h3>
+                    <p class="text-slate-500 leading-relaxed">We provide certified legal translation services between the following languages with full commitment to linguistic accuracy and specialized terminology.</p>
+                </div>
+                <div class="text-right" dir="rtl">
+                    <h3 class="text-3xl font-extrabold text-eme-gray mb-4">اللغات المتاحة</h3>
+                    <p class="text-slate-500 leading-relaxed">نوفر خدمات الترجمة القانونية والمعتمدة بين اللغات التالية مع الالتزام الكامل بالدقة اللغوية والمصطلحات المتخصصة.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="language-badge">Arabic <img src="flags/iraq.jpg" class="flag-placeholder" alt="Iraq Flag"></div>
+                <div class="language-badge">English <img src="flags/usa.jpg" class="flag-placeholder" alt="USA Flag"></div>
+                <div class="language-badge">Italian <img src="flags/italy.jpg" class="flag-placeholder" alt="Italy Flag"></div>
+                <div class="language-badge">French <img src="flags/france.jpg" class="flag-placeholder" alt="France Flag"></div>
+                <div class="language-badge">Turkish <img src="flags/turkey.jpg" class="flag-placeholder" alt="Turkey Flag"></div>
+                <div class="language-badge">Russian <img src="flags/russia.jpg" class="flag-placeholder" alt="Russia Flag"></div>
+                <div class="language-badge">Persian<img src="flags/iran.jpg" class="flag-placeholder" alt="Iran Flag"></div>
+                <div class="language-badge">Spanish <img src="flags/spain.jpg" class="flag-placeholder" alt="Spain Flag"></div>
+                <div class="language-badge">German <img src="flags/germany.jpg" class="flag-placeholder" alt="Germany Flag"></div>
+                <div class="language-badge">Kurdish <img src="flags/kurdistan.jpg" class="flag-placeholder" alt="Kurdistan Flag"></div>
+                <div class="language-badge">Chinese <img src="flags/china.jpg" class="flag-placeholder" alt="China Flag"></div>
+                <div class="language-badge bg-eme-brown border-none italic" style="background: #A67C52; text-shadow: none;">More Coming Soon...</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-900 text-white py-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="order-2 lg:order-1">
+                <div class="mb-12">
+                    <h4 class="text-eme-brown font-bold mb-4 uppercase tracking-widest text-sm">Philosophy of Translation</h4>
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        "Language is not merely a set of words to be spoken or written; it is a complete system that reflects human thought, culture, and the way we perceive the world. From this depth arises translation, as an intellectual act that connects languages, not only at the level of words, but at the level of meaning, context, and culture."
+                    </p>
+                </div>
+                
+                <div dir="rtl" class="border-r-4 border-eme-brown pr-8">
+                    <p class="text-xl md:text-2xl font-medium leading-loose text-white">
+                        "اللغة ليست مجرد كلماتٍ تُنطق أو تُكتب، بل هي نظام متكامل يعكس فكر الإنسان، وثقافته، وطريقة فهمه للعالم. ومن هذا العمق تولد الترجمة، بوصفها فعلًا معرفيًا يربط بين اللغات لا على مستوى اللفظ فقط، بل على مستوى المعنى والسياق والثقافة."
+                    </p>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-eme-brown rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <img src="homepage/statue.jpeg" alt="Baghdad Landmark" class="relative rounded-[2rem] w-full max-w-md h-[600px] object-cover shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gray-100 text-center text-slate-400 text-sm bg-white">
+        <p>&copy; 2026 EME-BAL FOR LEGAL TRANSLATION. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
