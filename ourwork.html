@@ -12,14 +12,20 @@
         .text-eme-gray { color: #546166; }
         .bg-eme-brown { background-color: #A67C52; }
         .text-eme-brown { color: #A67C52; }
+        .border-eme-brown { border-color: #A67C52; }
         
         /* Card Styling */
         .photo-card {
             position: relative;
             overflow: hidden;
-            border-radius: 28px;
+            border-radius: 20px; /* Slightly smaller radius for mobile */
             background-color: #fff;
             transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .photo-card { border-radius: 28px; }
         }
 
         .photo-card:hover {
@@ -36,15 +42,16 @@
             transform: scale(1.1) rotate(1deg);
         }
 
-        /* Landscape/Square aspect ratios */
+        /* Aspect Ratios */
         .landscape-wide { aspect-ratio: 16 / 9; }
         .landscape-extra-wide { aspect-ratio: 21 / 9; }
         .square-fit { aspect-ratio: 1 / 1; }
 
+        /* Mobile Adjustments for Images */
         @media (max-width: 768px) {
             .landscape-wide, .landscape-extra-wide, .square-fit {
                 aspect-ratio: auto;
-                height: 300px;
+                height: 250px; /* Fixed height for mobile uniformity */
             }
         }
 
@@ -75,34 +82,51 @@
 </head>
 <body class="text-slate-900">
 
-    <nav class="flex justify-between items-center py-4 px-6 md:px-12 border-b border-gray-200/50 sticky top-0 z-50" style="background-color: rgba(246, 242, 227, 0.8); backdrop-filter: blur(12px);">
+    <nav class="flex justify-between items-center py-4 px-6 md:px-12 border-b border-gray-200/50 sticky top-0 z-50 transition-all duration-300" style="background-color: rgba(246, 242, 227, 0.9); backdrop-filter: blur(12px);">
         <div class="flex items-center gap-3">
-            <img src="homepage/logo.jpeg" alt="EME-BAL Logo" class="h-12 w-auto">
-            <div class="text-xl font-extrabold tracking-tight text-eme-gray">EME<span class="text-eme-brown">-</span>BAL</div>
+            <img src="homepage/logo.jpeg" alt="EME-BAL Logo" class="h-10 md:h-12 w-auto">
+            <div class="text-lg md:text-xl font-extrabold tracking-tight text-eme-gray">EME<span class="text-eme-brown">-</span>BAL</div>
         </div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="index.html" class="text-[#A67C52]">Home</a>
+
+        <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
+            <a href="index.html" class="hover:text-[#A67C52] transition">Home</a>
             <a href="services.html" class="hover:text-[#A67C52] transition">Services</a>
-            <a href="ourwork.html" class="hover:text-[#A67C52] transition">Workshop</a>
-            <button class="bg-[#546166] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-[#A67C52] transition"><a href="contact.html">Contact Us</a></button>
+            <a href="ourwork.html" class="text-[#A67C52]">Workshop</a>
+            <button class="bg-[#546166] text-white px-5 py-2 rounded-full text-xs font-bold hover:bg-[#A67C52] transition">
+                <a href="contact.html">Contact Us</a>
+            </button>
         </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-eme-gray focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+        </button>
     </nav>
 
-    <header class="pt-20 pb-12 px-6 text-center max-w-4xl mx-auto">
+    <div id="mobile-menu" class="hidden fixed inset-x-0 top-[73px] bg-[#F6F2E3] border-b border-gray-200 shadow-xl z-40 p-6 flex flex-col gap-4 md:hidden">
+        <a href="index.html" class="text-eme-gray font-semibold hover:text-[#A67C52]">Home</a>
+        <a href="services.html" class="text-eme-gray font-semibold hover:text-[#A67C52]">Services</a>
+        <a href="ourwork.html" class="text-[#A67C52] font-bold">Workshop</a>
+        <a href="contact.html" class="bg-[#546166] text-white text-center py-3 rounded-xl font-bold mt-2">Contact Us</a>
+    </div>
+
+    <header class="pt-12 md:pt-20 pb-8 md:pb-12 px-6 text-center max-w-4xl mx-auto">
         <h1 class="text-4xl md:text-6xl font-extrabold text-eme-gray mb-4">Workshops</h1>
-        <div class="h-1.5 w-20 bg-eme-brown mx-auto rounded-full mb-8"></div>
-        <div dir="rtl" class="mb-6">
-            <p class="text-lg md:text-xl font-medium leading-relaxed text-slate-600">
-توثيق لورش تدريبية متخصصة أُقيمت لتأهيل المهتمين بمجال الترجمة، مع التركيز على الجوانب العملية والتطبيقية، ومناقشة نماذج واقعية من سوق العمل
+        <div class="h-1.5 w-16 md:w-20 bg-eme-brown mx-auto rounded-full mb-8"></div>
+        <div dir="rtl" class="mb-6 space-y-4">
+            <p class="text-base md:text-xl font-medium leading-relaxed text-slate-600">
+                توثيق لورش تدريبية متخصصة أُقيمت لتأهيل المهتمين بمجال الترجمة، مع التركيز على الجوانب العملية والتطبيقية، ومناقشة نماذج واقعية من سوق العمل
             </p>
-            <p class="text-lg md:text-xl font-medium leading-relaxed text-slate-600 mt-8">
-            Documentation of specialized training workshops held to qualify individuals interested in the field of translation, with a focus on practical and applied aspects, and the discussion of real-life examples from the labor market
+            <p class="text-sm md:text-lg font-medium leading-relaxed text-slate-500 mt-4 md:mt-8 px-2 md:px-0">
+                Documentation of specialized training workshops held to qualify individuals interested in the field of translation, with a focus on practical and applied aspects, and the discussion of real-life examples from the labor market
             </p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 pb-32">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <main class="max-w-7xl mx-auto px-6 pb-20 md:pb-32">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
             <div class="photo-card landscape-wide group">
                 <img src="workshops/workshop1.jpeg" class="img-zoom w-full h-full object-cover" alt="Workshop">
                 <div class="card-label">Main Session</div>
@@ -113,12 +137,12 @@
             </div>
         </div>
         
-        <div class="photo-card landscape-extra-wide group mb-12">
+        <div class="photo-card landscape-extra-wide group mb-4 md:mb-12">
             <img src="workshops/workshop3.jpeg" class="img-zoom w-full h-full object-cover" alt="Workshop">
             <div class="card-label">Workshop Overview</div>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             <div class="photo-card square-fit group">
                 <img src="workshops/workshop4.jpg" class="img-zoom w-full h-full object-cover" alt="Workshop">
                 <div class="card-label">Translation Session</div>
@@ -141,9 +165,18 @@
         </div>
     </main>
 
-    <footer class="py-12 border-t border-gray-200/50 text-center text-slate-500 text-sm">
+    <footer class="py-8 md:py-12 border-t border-gray-200/50 text-center text-slate-500 text-sm">
         <p>© 2026 EME-BAL FOR LEGAL TRANSLATION. All rights reserved.</p>
     </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>
