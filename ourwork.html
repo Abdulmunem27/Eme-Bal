@@ -7,86 +7,17 @@
     <link rel="icon" type="image/jpeg" href="homepage/logo.jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F6F2E3; }
-        .text-eme-gray { color: #546166; }
-        .bg-eme-brown { background-color: #A67C52; }
-        .text-eme-brown { color: #A67C52; }
-        .border-eme-brown { border-color: #A67C52; }
-        
-        /* Card Styling */
-        .photo-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px; /* Slightly smaller radius for mobile */
-            background-color: #fff;
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            width: 100%;
-        }
-
-        @media (min-width: 768px) {
-            .photo-card { border-radius: 28px; }
-        }
-
-        .photo-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 30px 50px -15px rgba(84, 97, 102, 0.25);
-            z-index: 10;
-        }
-
-        .img-zoom {
-            transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-
-        .photo-card:hover .img-zoom {
-            transform: scale(1.1) rotate(1deg);
-        }
-
-        /* Aspect Ratios */
-        .landscape-wide { aspect-ratio: 16 / 9; }
-        .landscape-extra-wide { aspect-ratio: 21 / 9; }
-        .square-fit { aspect-ratio: 1 / 1; }
-
-        /* Mobile Adjustments for Images */
-        @media (max-width: 768px) {
-            .landscape-wide, .landscape-extra-wide, .square-fit {
-                aspect-ratio: auto;
-                height: 250px; /* Fixed height for mobile uniformity */
-            }
-        }
-
-        /* Overlay Text */
-        .card-label {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 8px 16px;
-            border-radius: 14px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #546166;
-            opacity: 0;
-            transform: translateY(10px);
-            transition: all 0.4s ease;
-        }
-
-        .photo-card:hover .card-label {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-slate-900">
 
     <nav class="flex justify-between items-center py-4 px-6 md:px-12 border-b border-gray-200/50 sticky top-0 z-50 transition-all duration-300" style="background-color: rgba(246, 242, 227, 0.9); backdrop-filter: blur(12px);">
-        <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-all duration-300">
             <img src="homepage/logo.jpeg" alt="EME-BAL Logo" class="h-10 md:h-12 w-auto">
-            <div class="text-lg md:text-xl font-extrabold tracking-tight text-eme-gray">EME<span class="text-eme-brown">-</span>BAL</div>
-        </div>
+            <div class="text-lg md:text-xl font-extrabold tracking-tight text-eme-gray">
+                EME<span class="text-eme-brown">-</span>BAL
+            </div>
+        </a>
 
         <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
             <a href="index.html" class="hover:text-[#A67C52] transition">Home</a>
