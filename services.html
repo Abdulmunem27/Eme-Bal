@@ -7,80 +7,17 @@
     <link rel="icon" type="image/jpeg" href="homepage/logo.jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F6F2E3; }
-        
-        .text-eme-gray { color: #546166; }
-        .text-eme-brown { color: #A67C52; }
-        .bg-eme-brown { background-color: #A67C52; }
-        .bg-eme-gray { background-color: #546166; }
-        
-        .bento-card { transition: all 0.3s ease; height: 100%; }
-        .bento-card:hover { transform: translateY(-4px); filter: brightness(1.02); }
-
-        /* Infinite Scroll Animation */
-        .marquee-container {
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            padding: 20px 0;
-        }
-
-        .marquee-track {
-            display: flex;
-            gap: 20px;
-            width: max-content;
-            animation: scroll 40s linear infinite;
-        }
-
-        .marquee-track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .carousel-item {
-            width: 280px;
-            height: 380px;
-            flex-shrink: 0;
-            border-radius: 24px;
-            overflow: hidden;
-            border: 4px solid #fff;
-            background: #fff;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .carousel-item:hover {
-            transform: scale(1.02);
-            border-color: #A67C52;
-        }
-
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* Mobile adjustments for carousel */
-        @media (max-width: 768px) {
-            .carousel-item {
-                width: 220px;
-                height: 300px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-slate-900">
 
     <nav class="flex justify-between items-center py-4 px-6 md:px-12 border-b border-gray-200/50 sticky top-0 z-50 transition-all duration-300" style="background-color: rgba(246, 242, 227, 0.9); backdrop-filter: blur(12px);">
-        <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-all duration-300">
             <img src="homepage/logo.jpeg" alt="EME-BAL Logo" class="h-10 md:h-12 w-auto">
-            <div class="text-lg md:text-xl font-extrabold tracking-tight text-eme-gray">EME<span class="text-eme-brown">-</span>BAL</div>
-        </div>
+            <div class="text-lg md:text-xl font-extrabold tracking-tight text-eme-gray">
+                EME<span class="text-eme-brown">-</span>BAL
+            </div>
+        </a>
 
         <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
             <a href="index.html" class="hover:text-[#A67C52] transition">Home</a>
@@ -138,13 +75,56 @@
                 <div class="bento-card p-6 md:p-10 rounded-[24px] md:rounded-[32px] md:col-span-3 bg-eme-gray text-white shadow-xl" dir="rtl">
                     <h3 class="text-white font-black mb-4 bg-white/10 w-fit px-3 py-1 rounded-lg text-sm md:text-base">خدمات فيزا شنغن (Schengen Visa)</h3>
                     <p class="text-lg md:text-2xl font-bold leading-relaxed mb-6">
-                        كما نوفر خدمات فيزا شنغن لكل من إيطاليا وفرنسا وألماينا، وتشمل ترجمة المستندات المطلوبة، تدقيقها، إعداد وتنظيم ملف التقديم، حجوزات الطيران والفنادق، إصدار التأمين الصحي، وملىء استمارات التقديم، بما يسهّل على عملائنا استكمال الإجراءات بكل وضوح واطمئنان.
+                        كما نوفر خدمات فيزا شنغن لكل من إيطاليا وفرنسا وألمانيا، وتشمل ترجمة المستندات المطلوبة، تدقيقها، إعداد وتنظيم ملف التقديم، حجوزات الطيران والفنادق، إصدار التأمين الصحي، وملىء استمارات التقديم، بما يسهّل على عملائنا استكمال الإجراءات بكل وضوح واطمئنان.
                     </p>
                     <p class="text-sm md:text-base opacity-80 italic font-medium" dir="ltr">
                         "We also provide Schengen visa services for Italy, France, and Germany, including translation and proofreading of required documents, preparation and organization of the application file, flight and hotel bookings, issuance of health insurance, and completion of application forms."
                     </p>
                 </div>
             </div>
+            <div class="mt-8 mb-12">
+    <h3 class="text-xl md:text-2xl font-extrabold text-eme-gray mb-6 text-center md:text-right" dir="rtl">
+        تفاصيل خدماتنا الإضافية
+    </h3>
+    
+    <div class="flex flex-wrap justify-center md:justify-start gap-3 md:gap-4" dir="rtl">
+        <div class="bg-white border-2 border-eme-brown/20 px-6 py-3 rounded-full shadow-sm transition-all duration-300 cursor-default hover:border-eme-brown hover:bg-[#A67C5210] hover:-translate-y-1 hover:shadow-md">
+            <span class="text-sm md:text-base font-bold text-eme-gray">ترجمة عقود تأسيس الشركات ومحاضر التأسيس والمناقصات</span>
+        </div>
+
+        <div class="bg-white border-2 border-eme-brown/20 px-6 py-3 rounded-full shadow-sm transition-all duration-300 cursor-default hover:border-eme-brown hover:bg-[#A67C5210] hover:-translate-y-1 hover:shadow-md">
+            <span class="text-sm md:text-base font-bold text-eme-gray">ترجمة كشوفات الحسابات المصرفية والختامية والسجلات التجارية والفواتير</span>
+        </div>
+
+        <div class="bg-white border-2 border-eme-brown/20 px-6 py-3 rounded-full shadow-sm transition-all duration-300 cursor-default hover:border-eme-brown hover:bg-[#A67C5210] hover:-translate-y-1 hover:shadow-md">
+            <span class="text-sm md:text-base font-bold text-eme-gray">ترجمة كافة الوثائق المتعلقة بالفيز والاقامة ومعاملات لم الشمل</span>
+        </div>
+
+        <div class="bg-white border-2 border-eme-brown/20 px-6 py-3 rounded-full shadow-sm transition-all duration-300 cursor-default hover:border-eme-brown hover:bg-[#A67C5210] hover:-translate-y-1 hover:shadow-md">
+            <span class="text-sm md:text-base font-bold text-eme-gray">ترجمة شهادات الخبرة والسيرة الذاتية ودفاتر الخدمة</span>
+        </div>
+
+        <div class="bg-white border-2 border-eme-brown/20 px-6 py-3 rounded-full shadow-sm transition-all duration-300 cursor-default hover:border-eme-brown hover:bg-[#A67C5210] hover:-translate-y-1 hover:shadow-md">
+            <span class="text-sm md:text-base font-bold text-eme-gray">ترجمة عقود الايجار والبيع والشراء وسندات العقار</span>
+        </div>
+
+        <div class="bg-white border-2 border-eme-brown/20 px-6 py-3 rounded-full shadow-sm transition-all duration-300 cursor-default hover:border-eme-brown hover:bg-[#A67C5210] hover:-translate-y-1 hover:shadow-md">
+            <span class="text-sm md:text-base font-bold text-eme-gray">ترجمة التأييدات والوثائق المدرسية</span>
+        </div>
+
+        <div class="bg-white border-2 border-eme-brown/20 px-6 py-3 rounded-full shadow-sm transition-all duration-300 cursor-default hover:border-eme-brown hover:bg-[#A67C5210] hover:-translate-y-1 hover:shadow-md">
+            <span class="text-sm md:text-base font-bold text-eme-gray">ترجمة الوكالات العامة والخاصة</span>
+        </div>
+
+        <div class="bg-white border-2 border-eme-brown/20 px-6 py-3 rounded-full shadow-sm transition-all duration-300 cursor-default hover:border-eme-brown hover:bg-[#A67C5210] hover:-translate-y-1 hover:shadow-md">
+            <span class="text-sm md:text-base font-bold text-eme-gray">ترجمة المتمسكات الشخصية</span>
+        </div>
+
+        <div class="bg-eme-brown border-2 border-eme-brown px-6 py-3 rounded-full shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default">
+            <span class="text-sm md:text-base font-black text-white">ترجمة كافة الوثائق والمستندات</span>
+        </div>
+    </div>
+</div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
