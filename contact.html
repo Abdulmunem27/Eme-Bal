@@ -8,44 +8,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F6F2E3; }
-        .text-eme-gray { color: #546166; }
-        .text-eme-brown { color: #A67C52; }
-        .bg-eme-brown { background-color: #A67C52; }
-        .bg-eme-gray { background-color: #546166; }
-        
-        .contact-link {
-            color: #546166; 
-            transition: all 0.3s ease;
-        }
-        .contact-link:hover {
-            color: #A67C52;
-            transform: translateX(8px);
-        }
-
-        .map-container {
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-            border: 1px solid #e5e7eb;
-            background-color: #fff;
-        }
-        
-        @media (min-width: 768px) {
-            .map-container {
-                border-radius: 40px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-slate-900">
 
     <nav class="flex justify-between items-center py-4 px-6 md:px-12 border-b border-gray-200/50 sticky top-0 z-50 transition-all duration-300" style="background-color: rgba(246, 242, 227, 0.9); backdrop-filter: blur(12px);">
-        <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition-all duration-300">
             <img src="homepage/logo.jpeg" alt="EME-BAL Logo" class="h-10 md:h-12 w-auto">
-            <div class="text-lg md:text-xl font-extrabold tracking-tight text-eme-gray">EME<span class="text-eme-brown">-</span>BAL</div>
-        </div>
+            <div class="text-lg md:text-xl font-extrabold tracking-tight text-eme-gray">
+                EME<span class="text-eme-brown">-</span>BAL
+            </div>
+        </a>
 
         <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
             <a href="index.html" class="hover:text-[#A67C52] transition">Home</a>
@@ -145,7 +118,7 @@
 
         <div class="map-container h-[350px] md:h-[500px] relative group order-1 lg:order-2">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.455286266236!2d44.446195675144416!3d33.30691085671879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15578159577aad4b%3A0x94ec1623c6cde080!2sMakers%20of%20Baghdad!5e0!3m2!1sen!2siq!4v1769884040043!5m2!1sen!2siq" 
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3334.3644431584126!2d44.44809667544214!3d33.30932297344686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDE4JzMzLjYiTiA0NMKwMjYnNDMuOSJF!5e0!3m2!1sen!2siq!4v1738347783935!5m2!1sen!2siq" 
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
