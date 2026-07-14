@@ -118,6 +118,7 @@ body {
     background-color: #fff;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     width: 100%;
+    aspect-ratio: 4 / 3; /* Unified aspect ratio applied to ALL images */
 }
 
 .photo-card:hover {
@@ -138,14 +139,11 @@ body {
     transform: scale(1.1) rotate(1deg);
 }
 
-.landscape-wide { aspect-ratio: 16 / 9; }
-.landscape-extra-wide { aspect-ratio: 21 / 9; }
-.square-fit { aspect-ratio: 1 / 1; }
-
+/* Removed specific mixed aspect ratios to keep them perfectly uniform across the gallery */
 @media (max-width: 768px) {
-    .landscape-wide, .landscape-extra-wide, .square-fit {
-        aspect-ratio: auto;
-        height: 250px;
+    .photo-card {
+        aspect-ratio: 4 / 3;
+        height: auto; /* Overrides the previous fixed 250px height to maintain uniformity */
     }
 }
 
